@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
     
     <script>
         tailwind.config = {
@@ -327,4 +328,57 @@
                         <span class="font-bold text-green-600">40 ريال</span>
                     </div>
                     <div class="flex justify-between p-3 items-center">
-                        <span class="text-amber-900 font-medium"><i class="fas fa-hand
+                        <span class="text-amber-900 font-medium"><i class="fas fa-home ml-2 text-amber-500"></i>شهادة أسرة منتجة</span>
+                        <span class="font-bold text-green-600">50 ريال</span>
+                    </div>
+                </div>
+
+                <!-- قسم التقييمات والمراجعات -->
+                <div class="bg-gray-50 px-4 py-2 font-bold text-gray-500 text-xs">التقييمات والمراجعات</div>
+                <div class="divide-y divide-gray-100">
+                    <div class="flex justify-between p-3 items-center">
+                        <span class="text-purple-900 font-medium"><i class="fas fa-star ml-2 text-purple-500"></i>عرض جميع التقييمات</span>
+                        <a href="reviews.html" class="text-blue-600 font-bold text-sm">عرض ↓</a>
+                    </div>
+                </div>
+            </div>
+
+            <p class="text-center text-xs text-gray-400 mb-6">* الأسعار قابلة للتغيير حسب الخدمة والحالة</p>
+        </div>
+    </main>
+
+    <!-- شريط التنقل السفلي -->
+    <nav class="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 shadow-lg z-50">
+        <div class="container mx-auto px-4 max-w-lg md:max-w-4xl">
+            <div class="flex justify-around items-center py-3 divide-x divide-gray-200">
+                
+                <!-- الخصوصية والقانونية -->
+                <a href="privacy.html" class="nav-item flex flex-col items-center gap-1 flex-1 py-2 text-center hover:bg-gray-50 rounded-lg transition" data-page="privacy-page">
+                    <i class="fas fa-shield-alt text-lg"></i>
+                    <span class="text-[10px] font-semibold">الخصوصية</span>
+                </a>
+
+                <!-- الاتصال -->
+                <a href="contact.html" class="nav-item flex flex-col items-center gap-1 flex-1 py-2 text-center hover:bg-gray-50 rounded-lg transition" data-page="contact-page">
+                    <i class="fas fa-phone text-lg"></i>
+                    <span class="text-[10px] font-semibold">تواصل معنا</span>
+                </a>
+
+                <!-- الخدمات -->
+                <a href="services.html" class="nav-item flex flex-col items-center gap-1 flex-1 py-2 text-center hover:bg-gray-50 rounded-lg transition" data-page="services-page">
+                    <i class="fas fa-list text-lg"></i>
+                    <span class="text-[10px] font-semibold">الخدمات</span>
+                </a>
+
+                <!-- الصفحة الرئيسية -->
+                <a href="#" onclick="switchPage('home-page')" class="nav-item flex flex-col items-center gap-1 flex-1 py-2 text-center hover:bg-gray-50 rounded-lg transition active">
+                    <i class="fas fa-home text-lg"></i>
+                    <span class="text-[10px] font-semibold">الرئيسية</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <script src="script.js"></script>
+</body>
+</html>a-hand

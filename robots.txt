@@ -1,0 +1,61 @@
+# متقن - ملف روبوتات محركات البحث
+# تاريخ الإنشاء: 6 فبراير 2026
+# آخر تحديث: 6 فبراير 2026
+
+# السماح لجميع محركات البحث بالزحف
+User-agent: *
+Allow: /
+
+# قائمة محركات البحث المسموح لها
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 1
+
+User-agent: DuckDuckBot
+Allow: /
+Crawl-delay: 1
+
+# منع الروبوتات السيئة
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+# ملفات لا تحتاج للزحف
+Disallow: /admin/
+Disallow: /private/
+Disallow: /*.backup
+Disallow: /*.bak
+
+# ملفات وديناميكيات معينة
+Disallow: /cgi-bin/
+Disallow: /temp/
+Disallow: /tmp/
+Disallow: /search?
+Disallow: /*?
+Allow: /*.html$
+Allow: /*.json$
+Allow: /*.css$
+Allow: /*.js$
+
+# خريطة الموقع
+Sitemap: https://mutqin.com/sitemap.xml
+
+# وقت التعطل (اختياري)
+# تجنب الزحف خلال أوقات معينة
+# Request-rate: 10/1m
