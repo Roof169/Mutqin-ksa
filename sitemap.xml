@@ -5,7 +5,7 @@
 
     <!-- الصفحة الرئيسية -->
     <url>
-        <loc>https://mutqin.com/</loc>
+        <loc>https://mutqin-ksa.netlify.app/</loc>
         <lastmod>2026-02-06</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
@@ -13,7 +13,7 @@
 
     <!-- صفحة الخدمات -->
     <url>
-        <loc>https://mutqin.com/services.html</loc>
+        <loc>https://mutqin-ksa.netlify.app/services.html</loc>
         <lastmod>2026-02-06</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
@@ -21,7 +21,7 @@
 
     <!-- صفحة الاتصال -->
     <url>
-        <loc>https://mutqin.com/contact.html</loc>
+        <loc>https://mutqin-ksa.netlify.app/contact.html</loc>
         <lastmod>2026-02-06</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
@@ -29,7 +29,7 @@
 
     <!-- صفحة الخصوصية -->
     <url>
-        <loc>https://mutqin.com/privacy.html</loc>
+        <loc>https://mutqin-ksa.netlify.app/privacy.html</loc>
         <lastmod>2026-02-06</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -37,7 +37,7 @@
 
     <!-- صفحة التقييمات -->
     <url>
-        <loc>https://mutqin.com/reviews.html</loc>
+        <loc>https://mutqin-ksa.netlify.app/reviews.html</loc>
         <lastmod>2026-02-06</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
@@ -47,7 +47,7 @@
     
     <!-- تمويلات بنك التنمية -->
     <url>
-        <loc>https://mutqin.com/services.html?service=bank-financing</loc>
+        <loc>https://mutqin-ksa.netlify.app/services.html?service=bank-financing</loc>
         <lastmod>2026-02-06</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
@@ -55,7 +55,7 @@
 
     <!-- خدمات مساند -->
     <url>
-        <loc>https://mutqin.com/services.html?service=musaned</loc>
+        <loc>https://mutqin-ksa.netlify.app/services.html?service=musaned</loc>
         <lastmod>2026-02-06</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
@@ -63,7 +63,7 @@
 
     <!-- حساب المواطن -->
     <url>
-        <loc>https://mutqin.com/services.html?service=citizen-account</loc>
+        <loc>https://mutqin-ksa.netlify.app/services.html?service=citizen-account</loc>
         <lastmod>2026-02-06</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
@@ -71,7 +71,7 @@
 
     <!-- السيرة الذاتية -->
     <url>
-        <loc>https://mutqin.com/services.html?service=cv-design</loc>
+        <loc>https://mutqin-ksa.netlify.app/services.html?service=cv-design</loc>
         <lastmod>2026-02-06</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
@@ -79,7 +79,7 @@
 
     <!-- التأمينات الاجتماعية -->
     <url>
-        <loc>https://mutqin.com/services.html?service=insurance</loc>
+        <loc>https://mutqin-ksa.netlify.app/services.html?service=insurance</loc>
         <lastmod>2026-02-06</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
@@ -87,7 +87,7 @@
 
     <!-- الضمان المطور -->
     <url>
-        <loc>https://mutqin.com/services.html?service=social-security</loc>
+        <loc>https://mutqin-ksa.netlify.app/services.html?service=social-security</loc>
         <lastmod>2026-02-06</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
@@ -95,7 +95,7 @@
 
     <!-- جدارات وطاقات -->
     <url>
-        <loc>https://mutqin.com/services.html?service=employment</loc>
+        <loc>https://mutqin-ksa.netlify.app/services.html?service=employment</loc>
         <lastmod>2026-02-06</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
@@ -103,7 +103,7 @@
 
     <!-- الوثائق -->
     <url>
-        <loc>https://mutqin.com/services.html?service=documents</loc>
+        <loc>https://mutqin-ksa.netlify.app/services.html?service=documents</loc>
         <lastmod>2026-02-06</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
@@ -111,7 +111,7 @@
 
     <!-- الاستشارات والحلول -->
     <url>
-        <loc>https://mutqin.com/services.html?service=consulting</loc>
+        <loc>https://mutqin-ksa.netlify.app/services.html?service=consulting</loc>
         <lastmod>2026-02-06</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
