@@ -26,8 +26,8 @@ const connectDB = async () => {
     });
     console.log('✅ MongoDB Connected Successfully');
   } catch (error) {
-    console.error('❌ MongoDB Connection Failed:', error.message);
-    process.exit(1);
+    console.warn('⚠️ MongoDB Connection Failed (in-memory mode):', error.message);
+    console.log('ℹ️ Running in demo mode without database persistence');
   }
 };
 
