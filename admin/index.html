@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لوحة التحكم - متقن</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { font-family: 'Cairo', sans-serif; }
+        .sidebar { position: fixed; right: 0; top: 0; height: 100vh; width: 250px; background: #1a2a6c; }
+        .main-content { margin-right: 250px; }
+        .nav-item { padding: 15px 20px; color: white; cursor: pointer; border-right: 3px solid transparent; }
+        .nav-item.active { background: #0f172a; border-right-color: #2563eb; }
+        .nav-item:hover { background: #0f172a; }
+        .btn-primary { @apply bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded; }
+        .btn-danger { @apply bg-red-600 hover:bg-red-700 text-white px-2 py-1 rounded text-sm; }
+        .table-container { overflow-x: auto; }
+        table { width: 100%; border-collapse: collapse; }
+        th, td { padding: 12px; text-align: right; border-bottom: 1px solid #e5e7eb; }
+        th { background: #f3f4f6; font-weight: bold; }
+        tr:hover { background: #f9fafb; }
+        .modal { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.5); }
+        .modal.active { display: flex; }
+        .modal-content { background: white; padding: 30px; border-radius: 8px; max-width: 600px; height: fit-content; }
+        .form-group { margin-bottom: 15px; }
+        label { display: block; margin-bottom: 5px; font-weight: 600; }
+        input, textarea, select { width: 100%; padding: 10px; border: 1px solid #d1d5db; border-radius: 4px; font-family: Cairo; }
+        .alert { padding: 12px 15px; border-radius: 4px; margin-bottom: 15px; }
+        .alert-success { background: #d1fae5; color: #065f46; }
+        .alert-error { background: #fee2e2; color: #991b1b; }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="p-6 border-b border-blue-900">
+            <h1 class="text-white font-bold text-xl flex items-center gap-2">
+                <i class="fas fa-cogs"></i> لوحة التحكم
+            </h1>
+        </div>
+        <nav>
+            <div class="nav-item active" data-section="dashboard">
+                <i class="fas fa-chart-line ml-2"></i> لوحة المعلومات
+            </div>
+            <div class="nav-item" data-section="services">
+                <i class="fas fa-briefcase ml-2"></i> الخدمات
+            </div>
+            <div class="nav-item" data-section="reviews">
+                <i class="fas fa-star ml-2"></i> التقييمات
+            </div>
+            <div class="nav-item" data-section="messages">
+                <i class="fas fa-envelope ml-2"></i> الرسائل
+            </div>
+            <div class="nav-item mt-8" onclick="logout()">
+                <i class="fas fa-sign-out-alt ml-2"></i> تسجيل الخروج
+            </div>
+        </nav>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content p-6">
+        <!-- Alert Messages -->
+        <div id="alertContainer"></div>
+
+        <!-- Dashboard Section -->
+        <section id="dashboard-section" class="section">
+            <h2 class="text-3xl font-bold mb-6">لوحة المعلومات</h2>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-6">
+                <div class="bg-white p-6 rounded shadow">
+                    <div class="flex justify-between items-center">
+                        <div>
+                            <p class="text-gray-500">إجمالي الخدمات</p>
+                            <p class="text-3xl font-bold" id="totalServices">0</p>
+                        </div>
+                        <i class="fas fa-briefcase text-3xl text-blue-500 opacity-20"></i>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded shadow">
+                    <div class="flex justify-between items-center">
+                        <div>
+                            <p class="text-gray-500">التقييمات المعلقة</p>
+                            <p class="text-3xl font-bold" id="pendingReviews">0</p>
+                        </div>
+                        <i class="fas fa-star text-3xl text-yellow-500 opacity-20"></i>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded shadow">
+                    <div class="flex justify-between items-center">
+                        <div>
+                            <p class="text-gray-500">الرسائل الجديدة</p>
+                            <p class="text-3xl font-bold" id="newMessages">0</p>
+                        </div>
+                        <i class="fas fa-envelope text-3xl text-green-500 opacity-20"></i>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded shadow">
+                    <div class="flex justify-between items-center">
+                        <div>
+                            <p class="text-gray-500">API Status</p>
+                            <p class="text-xl font-bold text-green-600" id="apiStatus">متصل</p>
+                        </div>
+                        <i class="fas fa-server text-3xl text-green-500 opacity-20"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services-section" class="section hidden">
+            <div class="flex justify-between items-center mb-6">
+                <h2 class="text-3xl font-bold">إدارة الخدمات</h2>
+                <button class="btn-primary" onclick="openServiceModal()">+ إضافة خدمة جديدة</button>
+            </div>
+            <div class="bg-white rounded shadow">
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>الإجراءات</th>
+                                <th>الفئة</th>
+                                <th>السعر</th>
+                                <th>الاسم</th>
+                            </tr>
+                        </thead>
+                        <tbody id="services-table">
+                            <tr><td colspan="4" class="text-center text-gray-500">جاري التحميل...</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reviews Section -->
+        <section id="reviews-section" class="section hidden">
+            <h2 class="text-3xl font-bold mb-6">إدارة التقييمات</h2>
+            <div class="bg-white rounded shadow">
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>الإجراءات</th>
+                                <th>التقييم</th>
+                                <th>البريد</th>
+                                <th>الاسم</th>
+                            </tr>
+                        </thead>
+                        <tbody id="reviews-table">
+                            <tr><td colspan="4" class="text-center text-gray-500">جاري التحميل...</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Messages Section -->
+        <section id="messages-section" class="section hidden">
+            <h2 class="text-3xl font-bold mb-6">الرسائل المستلمة</h2>
+            <div class="bg-white rounded shadow">
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>الإجراءات</th>
+                                <th>الحالة</th>
+                                <th>الموضوع</th>
+                                <th>البريد</th>
+                            </tr>
+                        </thead>
+                        <tbody id="messages-table">
+                            <tr><td colspan="4" class="text-center text-gray-500">جاري التحميل...</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Service Modal -->
+    <div id="service-modal" class="modal">
+        <div class="modal-content">
+            <div class="flex justify-between items-center mb-4">
+                <h3 class="text-2xl font-bold">إضافة/تعديل خدمة</h3>
+                <button onclick="closeModal('service-modal')" class="text-2xl">×</button>
+            </div>
+            <form id="service-form">
+                <input type="hidden" id="service-id">
+                <div class="form-group">
+                    <label>اسم الخدمة *</label>
+                    <input type="text" id="service-name" required>
+                </div>
+                <div class="form-group">
+                    <label>الوصف *</label>
+                    <textarea id="service-description" rows="4" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label>السعر *</label>
+                    <input type="number" id="service-price" step="0.01" required>
+                </div>
+                <div class="form-group">
+                    <label>الفئة</label>
+                    <select id="service-category">
+                        <option value="government">حكومي</option>
+                        <option value="financial">مالي</option>
+                        <option value="consulting">استشارات</option>
+                        <option value="other">أخرى</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label><input type="checkbox" id="service-featured"> خدمة مميزة</label>
+                </div>
+                <button type="submit" class="btn-primary w-full">حفظ</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html>
