@@ -1,0 +1,12 @@
+# Netlify configuration for Mutqin-ksa
+# Publishes the repository root (static site) without build step
+[build]
+  publish = "."
+  command = ""
+
+[context.production.environment]
+# Add any environment variables here if needed
+
+[dev]
+  command = ""
+  port = 8888
