@@ -1,0 +1,33 @@
+name: 🚀 Deploy to Netlify
+
+on:
+  push:
+    branches: [ main ]
+
+permissions: {}
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 📥 Checkout repository
+        uses: actions/checkout@v4
+
+      - name: ⚙️ Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: 📦 Install Netlify CLI
+        run: npm install netlify-cli
+
+      - name: 🚀 Deploy to Netlify
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+        run: |
+          if [ -n "$NETLIFY_SITE_ID" ]; then
+            npx netlify deploy --dir=. --prod --site=$NETLIFY_SITE_ID
+          else
+            npx netlify deploy --dir=. --prod
+          fi
