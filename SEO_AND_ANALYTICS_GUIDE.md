@@ -37,13 +37,13 @@
 #### 3. الحصول على معرّف التتبع (Tracking ID)
 
 بعد الإنشاء، ستحصل على:
-- **معرّف الخاصية:** `G-XXXXXXXXXX` (مثل: G-7TQXF9P2K1)
+- **معرّف الخاصية:** `G-F7BVEGHFRQ` (مثل: G-7TQXF9P2K1)
 
 **هذا هو الرقم الذي تحتاج لاستبداله في جميع صفحات الموقع.**
 
 #### 4. تحديث الكود في صفحات الموقع
 
-استبدل `G-XXXXXXXXXX` بمعرّفك الفعلي في جميع الملفات:
+استبدل `G-F7BVEGHFRQ` بمعرّفك الفعلي في جميع الملفات:
 
 **في `index.html`, `services.html`, `contact.html`, `privacy.html`:**
 
@@ -54,7 +54,7 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-XXXXXXXXXX'); <!-- استبدل هنا أيضًا -->
+    gtag('config', 'G-F7BVEGHFRQ); <!-- استبدل هنا أيضًا -->
 </script>
 
 <!-- غيّره إلى -->
@@ -63,7 +63,7 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-7TQXF9P2K1'); <!-- ضع رقمك هنا -->
+    gtag('config', 'G-F7BVEGHFRQ'); <!-- ضع رقمك هنا -->
 </script>
 ```
 
@@ -266,12 +266,12 @@ blc http://localhost:8000 -r
 
 ```html
 <!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-F7BVEGHFRQ"></script>
 <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-XXXXXXXXXX'); // ⚠️ استبدل بمعرّفك الفعلي
+    gtag('config', 'G-F7BVEGHFRQ'); // ⚠️ استبدل بمعرّفك الفعلي
 </script>
 ```
 
@@ -290,7 +290,7 @@ blc http://localhost:8000 -r
 
 1. أنشئ حساب Google Analytics (إن لم يكن موجودًا)
 2. احصل على معرّف التتبع (Tracking ID)
-3. استبدل `G-XXXXXXXXXX` في جميع الصفحات
+3. استبدل `G-F7BVEGHFRQ` في جميع الصفحات
 4. ادفع التغييرات (push) إلى GitHub
 5. تحقق من `Deployment_FINAL_SUMMARY.md` للمراحل التالية
 
