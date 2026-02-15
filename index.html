@@ -3,50 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="متقن - منصة خدماتك الحكومية والمالية والاستشارية. نقدم خدمات احترافية متعددة بأسعار تنافسية وجودة عالية.">
-    <meta name="keywords" content="خدمات استشارية, استشارات مالية, خدمات حكومية, متقن, استشارات قانونية, الخدمات الإدارية">
-    <meta name="author" content="متقن - Mutqin">
-    <meta name="robots" content="index, follow">
-    <meta name="theme-color" content="#1a2a6c">
-    
-    <!-- Open Graph Tags -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="مُتقن | خدماتك الحكومية والمالية في جيبك">
-    <meta property="og:description" content="متقن - منصة خدماتك الحكومية والمالية والاستشارية. نقدم خدمات احترافية متعددة.">
-    <meta property="og:image" content="https://via.placeholder.com/1200x630?text=Mutqin+Services">
-    <meta property="og:url" content="https://mutqin-ksa.netlify.app">
-    <meta property="og:site_name" content="متقن">
-    
-    <!-- Twitter Card Tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="مُتقن | خدماتك الحكومية والمالية">
-    <meta name="twitter:description" content="خدمات استشارية واستشارات مالية وحكومية من متقن">
-    <meta name="twitter:image" content="https://via.placeholder.com/1200x630?text=Mutqin+Services">
-    
-    <title>مُتقن | خدماتك الحكومية والمالية في جيبك</title>
+    <title>مُتقن | عروض رمضان 🌙</title>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
-    
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F7BVEGHFRQ"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-F7BVEGHFRQ'); // استبدل G-F7BVEGHFRQ برقم Google Analytics الخاص بك
-    </script>
     
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        musaned: {
-                            primary: '#1a2a6c',
-                            gold: '#b8860b',
-                        }
+                        musaned: { primary: '#1a2a6c', gold: '#b8860b' },
+                        ramadan: { dark: '#4c1d95', light: '#8b5cf6', gold: '#fbbf24' }
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
                     }
                 }
             }
@@ -56,54 +27,37 @@
     <style>
         body { font-family: 'Cairo', sans-serif; background-color: #f8fafc; padding-bottom: 90px; }
         .gradient-header { background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); }
+        .ramadan-header { background: linear-gradient(135deg, #4c1d95 0%, #1e1b4b 100%); }
         .page-section { display: none; animation: fadeIn 0.4s ease-in-out; }
         .page-section.active { display: block; }
-        .nav-item.active { color: #1e293b; font-weight: bold; transform: translateY(-5px); }
-        .nav-item.active i { color: #2563eb; }
+        .nav-item.active { color: #4c1d95; font-weight: bold; transform: translateY(-5px); }
+        .nav-item.active i { color: #fbbf24; }
         
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(10px); }
             to { opacity: 1; transform: translateY(0); }
         }
 
-        .offer-badge {
-            position: absolute;
-            top: -10px;
-            left: -10px;
-            background: #ef4444;
-            color: white;
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 0.7rem;
-            font-weight: bold;
-            transform: rotate(-10deg);
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            z-index: 10;
-        }
-        
-        .service-card {
-            border-bottom-width: 4px;
-            transition: all 0.3s;
-        }
-        .service-card:active { transform: scale(0.98); }
+        .discount-price { text-decoration: line-through; color: #9ca3af; font-size: 0.75rem; margin-left: 5px; }
+        .final-price { color: #ef4444; font-weight: bold; font-size: 1rem; }
     </style>
 </head>
 <body class="text-gray-800">
 
     <!-- Header -->
-    <header class="gradient-header text-white p-6 shadow-lg rounded-b-[35px] mb-6 relative overflow-hidden">
+    <header class="ramadan-header text-white p-6 shadow-lg rounded-b-[35px] mb-6 relative overflow-hidden">
         <div class="relative z-10 flex justify-between items-center">
             <div>
                 <h1 class="text-3xl font-black tracking-wide flex items-center gap-2">
-                    مُتقن <i class="fas fa-check-double text-green-400 text-2xl"></i>
+                    مُتقن <i class="fas fa-moon text-yellow-400 text-2xl animate-pulse-slow"></i>
                 </h1>
-                <p class="text-gray-400 text-xs mt-1">خدمات حكومية • تمويلات • استقدام</p>
+                <p class="text-gray-200 text-xs mt-1">🌙 عروض شهر الخير (خصم 10%)</p>
             </div>
-            <a href="https://wa.me/966536914232" class="bg-green-500 hover:bg-green-600 text-white p-3 rounded-full shadow-lg transition transform hover:scale-110">
+            <a href="https://wa.me/966500000000?text=أريد%20الاستفادة%20من%20عروض%20رمضان" class="bg-yellow-500 hover:bg-yellow-600 text-purple-900 font-bold p-3 rounded-full shadow-lg transition transform hover:scale-110">
                 <i class="fab fa-whatsapp text-2xl"></i>
             </a>
         </div>
-        <div class="absolute top-0 left-0 w-40 h-40 bg-white opacity-5 rounded-full -translate-x-10 -translate-y-10 blur-2xl"></div>
+        <div class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none bg-[url('https://www.transparenttextures.com/patterns/arabesque.png')]"></div>
     </header>
 
     <!-- المحتوى -->
@@ -111,32 +65,31 @@
 
         <!-- 1. الصفحة الرئيسية -->
         <div id="home-page" class="page-section active">
-            <!-- بنر ترحيبي -->
-            <div class="bg-white rounded-2xl p-5 shadow-sm mb-6 border border-gray-100 flex items-center gap-4">
-                <div class="bg-blue-100 p-3 rounded-full text-blue-600">
-                    <i class="fas fa-headset text-xl"></i>
-                </div>
-                <div>
-                    <h2 class="font-bold text-gray-800">حياك الله في مُتقن 👋</h2>
-                    <p class="text-gray-500 text-xs">نخلص إجراءاتك الحكومية والمالية بدقة وأمان.</p>
+            
+            <!-- بنر العرض الرئيسي -->
+            <div class="bg-gradient-to-r from-purple-700 to-indigo-600 rounded-2xl p-5 shadow-lg mb-6 border-2 border-yellow-400 text-white relative overflow-hidden text-center cursor-pointer" onclick="switchPage('offers-page')">
+                <h2 class="text-xl font-black mb-1 text-yellow-300">تفرغ لعبادتك.. 🙏</h2>
+                <p class="text-sm mb-3">ومعاملاتك علينا بخصومات رمضانية</p>
+                <div class="inline-block bg-white/20 px-4 py-1 rounded-lg text-xs font-bold border border-white/30">
+                    كود الخصم: RAMADAN
                 </div>
             </div>
 
             <h3 class="font-bold text-lg mb-4 flex items-center gap-2 text-gray-800">
-                <i class="fas fa-layer-group text-blue-600"></i> خدماتنا الشاملة
+                <i class="fas fa-layer-group text-purple-600"></i> خدماتنا الشاملة
             </h3>
             
             <div class="grid grid-cols-2 gap-3 mb-8">
                 
                 <!-- تمويلات بنك التنمية -->
-                <div class="service-card bg-white p-4 rounded-2xl shadow-sm text-center border-orange-500" onclick="switchPage('prices-page')">
+                <div class="bg-white p-4 rounded-2xl shadow-sm text-center border-b-4 border-orange-500 hover:shadow-md transition" onclick="switchPage('prices-page')">
                     <img src="https://cdn-icons-png.flaticon.com/512/2382/2382461.png" alt="بنك التنمية" class="w-10 h-10 mx-auto mb-2 object-contain">
                     <h4 class="font-bold text-xs text-gray-800">تمويلات بنك التنمية</h4>
                     <span class="text-[10px] text-gray-400">نفاذ - أسرة - زواج</span>
                 </div>
 
                 <!-- إصدار الوثائق -->
-                <div class="service-card bg-white p-4 rounded-2xl shadow-sm text-center border-teal-500" onclick="switchPage('prices-page')">
+                <div class="bg-white p-4 rounded-2xl shadow-sm text-center border-b-4 border-teal-500 hover:shadow-md transition" onclick="switchPage('prices-page')">
                     <div class="w-10 h-10 mx-auto mb-2 bg-teal-50 rounded-full flex items-center justify-center text-teal-600">
                         <i class="fas fa-id-card text-xl"></i>
                     </div>
@@ -144,270 +97,216 @@
                     <span class="text-[10px] text-gray-400">عمل حر - أسر منتجة</span>
                 </div>
 
-                <!-- قسم مساند -->
-                <div class="service-card bg-white p-4 rounded-2xl shadow-sm text-center border-[#1a2a6c] col-span-2 relative overflow-hidden" onclick="switchPage('musaned-page')">
-                    <div class="absolute top-0 right-0 bg-[#b8860b] text-white text-[10px] px-2 py-1 rounded-bl-lg font-bold">خدمة جديدة</div>
+                <!-- مساند -->
+                <div class="bg-white p-4 rounded-2xl shadow-sm text-center border-b-4 border-[#1a2a6c] col-span-2 relative overflow-hidden" onclick="switchPage('musaned-page')">
                     <div class="flex items-center justify-center gap-3">
                         <div class="w-12 h-12 bg-indigo-50 rounded-full flex items-center justify-center text-[#1a2a6c]">
                             <i class="fas fa-user-nurse text-2xl"></i>
                         </div>
                         <div class="text-right">
-                            <h4 class="font-bold text-sm text-[#1a2a6c]">خدمات منصة مساند</h4>
-                            <p class="text-[10px] text-gray-500">استقدام - تأشيرات - حل رفض</p>
+                            <h4 class="font-bold text-sm text-[#1a2a6c]">خدمات مساند والاستقدام</h4>
+                            <p class="text-[10px] text-gray-500">حلول الرفض وإصدار التأشيرات</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- استشارات وحلول -->
-                <div class="service-card bg-white p-4 rounded-2xl shadow-sm text-center border-cyan-500 col-span-2" onclick="switchPage('prices-page')">
-                    <div class="flex items-center justify-center gap-3">
-                        <div class="w-10 h-10 bg-cyan-50 rounded-full flex items-center justify-center text-cyan-600">
-                            <i class="fas fa-lightbulb text-xl"></i>
-                        </div>
-                        <div class="text-right">
-                            <h4 class="font-bold text-xs text-gray-800">استشارات وحلول تقنية</h4>
-                            <p class="text-[10px] text-gray-500">حل المشاكل المعقدة والإيقافات</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- حساب المواطن -->
-                <div class="service-card bg-white p-4 rounded-2xl shadow-sm text-center border-green-500" onclick="switchPage('prices-page')">
+                <!-- باقي الخدمات -->
+                <div class="bg-white p-4 rounded-2xl shadow-sm text-center border-b-4 border-green-500" onclick="switchPage('prices-page')">
                     <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="حساب المواطن" class="w-10 h-10 mx-auto mb-2 object-contain">
                     <h4 class="font-bold text-xs text-gray-800">حساب المواطن</h4>
                 </div>
 
-                <!-- الضمان المطور -->
-                <div class="service-card bg-white p-4 rounded-2xl shadow-sm text-center border-yellow-500" onclick="switchPage('prices-page')">
+                <div class="bg-white p-4 rounded-2xl shadow-sm text-center border-b-4 border-yellow-500" onclick="switchPage('prices-page')">
                     <img src="https://cdn-icons-png.flaticon.com/512/943/943152.png" alt="الضمان" class="w-10 h-10 mx-auto mb-2 object-contain">
                     <h4 class="font-bold text-xs text-gray-800">الضمان المطور</h4>
                 </div>
 
-                <!-- خدمات التوظيف -->
-                <div class="service-card bg-white p-4 rounded-2xl shadow-sm text-center border-blue-500" onclick="switchPage('prices-page')">
+                <div class="bg-white p-4 rounded-2xl shadow-sm text-center border-b-4 border-blue-500" onclick="switchPage('prices-page')">
                     <img src="https://cdn-icons-png.flaticon.com/512/3281/3281289.png" alt="توظيف" class="w-10 h-10 mx-auto mb-2 object-contain">
                     <h4 class="font-bold text-xs text-gray-800">جدارات وطاقات</h4>
                 </div>
 
-                <!-- ساند والتأمينات -->
-                <div class="service-card bg-white p-4 rounded-2xl shadow-sm text-center border-indigo-500" onclick="switchPage('prices-page')">
-                    <img src="https://cdn-icons-png.flaticon.com/512/921/921347.png" alt="التأمينات" class="w-10 h-10 mx-auto mb-2 object-contain">
-                    <h4 class="font-bold text-xs text-gray-800">التأمينات وساند</h4>
-                </div>
-
-                 <!-- سيرة ذاتية -->
-                 <div class="service-card bg-white p-4 rounded-2xl shadow-sm text-center border-purple-500 col-span-2" onclick="switchPage('cv-page')">
+                <div class="bg-white p-4 rounded-2xl shadow-sm text-center border-b-4 border-purple-500" onclick="switchPage('cv-page')">
                     <div class="flex items-center justify-center gap-2">
                         <img src="https://cdn-icons-png.flaticon.com/512/3135/3135679.png" alt="CV" class="w-8 h-8 object-contain">
-                        <h4 class="font-bold text-xs text-gray-800">تصميم سيرة ذاتية (CV)</h4>
+                        <h4 class="font-bold text-xs text-gray-800">السيرة الذاتية (CV)</h4>
                     </div>
                 </div>
             </div>
-
-            <!-- بنر العروض -->
-            <div class="bg-gradient-to-r from-red-500 to-pink-600 rounded-2xl p-5 text-white text-center shadow-lg relative overflow-hidden cursor-pointer" onclick="switchPage('offers-page')">
-                <div class="offer-badge">وفر فلوسك</div>
-                <h3 class="text-xl font-black mb-1">عروض التوفير 🔥</h3>
-                <p class="text-xs opacity-90">باقات تجمع لك الخدمات بسعر أقل</p>
-                <i class="fas fa-tags absolute -bottom-2 -left-2 text-6xl opacity-20"></i>
-            </div>
         </div>
 
-        <!-- 2. صفحة خدمات مساند -->
+        <!-- 2. صفحة خدمات مساند (خصم واقعي) -->
         <div id="musaned-page" class="page-section">
             <div class="text-center mb-8 pt-4">
-                <h2 class="text-2xl font-bold text-musaned-primary mb-2">خدمات منصة مساند</h2>
-                <p class="text-gray-500 text-sm">نحل لك مشكلات الرفض ونصدر تأشيرتك بكل احترافية</p>
+                <h2 class="text-2xl font-bold text-musaned-primary mb-2">خدمات مساند</h2>
+                <span class="bg-red-100 text-red-600 px-3 py-1 rounded-full text-xs font-bold">عروض 10%</span>
             </div>
 
             <div class="space-y-6">
-                <!-- بطاقة 1 -->
-                <div class="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm hover:shadow-lg transition">
+                <div class="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm">
                     <h3 class="font-bold text-lg text-gray-800">الطلب الأساسي</h3>
-                    <div class="text-3xl font-bold text-musaned-primary my-3">150 <span class="text-sm font-normal text-gray-500">ريال</span></div>
-                    <ul class="text-sm space-y-2 text-gray-600 mb-6 text-right">
-                        <li><i class="fas fa-check text-green-500 ml-2"></i> إصدار تأشيرة (عاملة أولى)</li>
-                        <li><i class="fas fa-check text-green-500 ml-2"></i> متابعة الطلب حتى القبول</li>
-                        <li><i class="fas fa-check text-green-500 ml-2"></i> تحديث بيانات مساند</li>
-                    </ul>
-                    <a href="https://wa.me/966536914232?text=أريد%20طلب%20تأشيرة%20أساسي" class="block w-full bg-musaned-primary hover:bg-[#122055] text-white text-center py-3 rounded-xl font-bold transition">اطلب الآن</a>
+                    <div class="my-3">
+                        <span class="discount-price">150</span>
+                        <span class="text-3xl font-bold text-musaned-primary">135 <span class="text-sm font-normal text-gray-500">ريال</span></span>
+                    </div>
+                    <a href="https://wa.me/966500000000?text=عرض%20مساند%20135" class="block w-full bg-musaned-primary text-white text-center py-3 rounded-xl font-bold mt-4">اطلب بالعرض</a>
                 </div>
 
-                <!-- بطاقة 2 -->
                 <div class="bg-white border-2 border-musaned-gold rounded-2xl p-6 shadow-lg transform scale-105 relative">
-                    <div class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-musaned-gold text-white px-4 py-1 rounded-full text-xs font-bold shadow-sm">الأكثر طلباً</div>
+                    <div class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-musaned-gold text-white px-4 py-1 rounded-full text-xs font-bold">الأكثر طلباً</div>
                     <h3 class="font-bold text-lg text-musaned-primary">حل مشكلة الرفض</h3>
-                    <div class="text-3xl font-bold text-musaned-primary my-3">350 <span class="text-sm font-normal text-gray-500">ريال</span></div>
-                    <ul class="text-sm space-y-2 text-gray-600 mb-6 text-right">
-                        <li><i class="fas fa-check text-green-500 ml-2"></i> تجاوز رفض "الراتب غير كافٍ"</li>
-                        <li><i class="fas fa-check text-green-500 ml-2"></i> معالجة طلبات العمالة الثانية</li>
-                        <li><i class="fas fa-check text-green-500 ml-2"></i> تقديم بضمان كشف الحساب</li>
-                        <li><i class="fas fa-check text-green-500 ml-2"></i> استشارة قانونية للطلب</li>
-                    </ul>
-                    <a href="https://wa.me/966536914232?text=عندي%20مشكلة%20في%20مساند" class="block w-full bg-musaned-primary hover:bg-[#122055] text-white text-center py-3 rounded-xl font-bold transition">حل مشكلتي</a>
-                </div>
-
-                <!-- بطاقة 3 -->
-                <div class="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm hover:shadow-lg transition">
-                    <h3 class="font-bold text-lg text-gray-800">الباقة الشاملة</h3>
-                    <div class="text-3xl font-bold text-musaned-primary my-3">500 <span class="text-sm font-normal text-gray-500">ريال</span></div>
-                    <ul class="text-sm space-y-2 text-gray-600 mb-6 text-right">
-                        <li><i class="fas fa-check text-green-500 ml-2"></i> إصدار التأشيرة بالكامل</li>
-                        <li><i class="fas fa-check text-green-500 ml-2"></i> تنسيق التعاقد مع المكاتب</li>
-                        <li><i class="fas fa-check text-green-500 ml-2"></i> متابعة وصول العمالة</li>
-                    </ul>
-                    <a href="https://wa.me/966536914232?text=أريد%20باقة%20مساند%20الشاملة" class="block w-full bg-musaned-primary hover:bg-[#122055] text-white text-center py-3 rounded-xl font-bold transition">اطلب الباقة</a>
+                    <div class="my-3">
+                        <span class="discount-price">350</span>
+                        <span class="text-3xl font-bold text-musaned-primary">315 <span class="text-sm font-normal text-gray-500">ريال</span></span>
+                    </div>
+                    <a href="https://wa.me/966500000000?text=عرض%20حل%20الرفض" class="block w-full bg-musaned-primary text-white text-center py-3 rounded-xl font-bold mt-4">حل مشكلتي</a>
                 </div>
             </div>
-            
-            <p class="text-center text-xs text-gray-400 mt-6">* الأسعار لا تشمل الرسوم الحكومية أو رسوم المنصة.</p>
         </div>
 
-        <!-- 3. صفحة السيرة الذاتية -->
+        <!-- 3. صفحة السيرة الذاتية (خصم بسيط) -->
         <div id="cv-page" class="page-section">
             <h2 class="text-xl font-bold text-center mb-6 text-purple-700">تصميم السيرة الذاتية 📄</h2>
             
             <div class="space-y-4">
                 <div class="bg-white rounded-xl p-4 shadow-sm border border-gray-100 flex justify-between items-center">
-                    <div>
-                        <h3 class="font-bold text-sm">التصميم الأساسي</h3>
-                        <p class="text-gray-500 text-[10px]">تنسيق مرتب (عربي)</p>
-                    </div>
-                    <span class="text-xl font-black text-purple-600">40 <span class="text-[10px]">ريال</span></span>
+                    <div><h3 class="font-bold text-sm">التصميم الأساسي</h3></div>
+                    <div><span class="discount-price">40</span> <span class="final-price">35 ريال</span></div>
                 </div>
 
                 <div class="bg-white rounded-xl p-4 shadow-md border-2 border-purple-500 relative flex justify-between items-center">
-                    <div class="absolute -top-3 right-4 bg-purple-600 text-white text-[10px] px-2 py-1 rounded-full">الأكثر طلباً</div>
-                    <div>
-                        <h3 class="font-bold text-sm text-purple-700">التصميم الاحترافي (ATS)</h3>
-                        <p class="text-gray-500 text-[10px]">جرافيك حديث + كلمات مفتاحية</p>
-                    </div>
-                    <span class="text-xl font-black text-purple-600">80 <span class="text-[10px]">ريال</span></span>
-                </div>
-
-                <div class="bg-white rounded-xl p-4 shadow-sm border border-gray-100 flex justify-between items-center">
-                    <div>
-                        <h3 class="font-bold text-sm">الباقة الشاملة</h3>
-                        <p class="text-gray-500 text-[10px]">لغتين (عربي/إنجليزي) + ترجمة</p>
-                    </div>
-                    <span class="text-xl font-black text-purple-600">140 <span class="text-[10px]">ريال</span></span>
+                    <div class="absolute -top-3 right-4 bg-purple-600 text-white text-[10px] px-2 py-1 rounded-full">ATS</div>
+                    <div><h3 class="font-bold text-sm text-purple-700">الاحترافي</h3></div>
+                    <div><span class="discount-price">80</span> <span class="final-price">70 ريال</span></div>
                 </div>
                 
-                <a href="https://wa.me/966536914232?text=أريد%20طلب%20سيرة%20ذاتية" class="block bg-purple-600 text-white text-center py-3 rounded-xl font-bold mt-4 shadow hover:bg-purple-700">اطلب الآن</a>
+                <a href="https://wa.me/966500000000?text=أريد%20عرض%20السيرة%20الذاتية" class="block bg-purple-600 text-white text-center py-3 rounded-xl font-bold mt-4">اطلب بسعر العرض</a>
             </div>
         </div>
 
-        <!-- 4. صفحة العروض -->
+        <!-- 4. صفحة العروض (الباقات الرمضانية) -->
         <div id="offers-page" class="page-section">
-            <h2 class="text-xl font-bold text-center mb-6 text-red-500">عروض متقن الحصرية 🔥</h2>
+            <div class="text-center mb-6">
+                <h2 class="text-xl font-bold text-purple-900">باقات الخير 🌙</h2>
+                <p class="text-xs text-gray-500">وفر 10% إلى 15%</p>
+            </div>
 
             <!-- باقة الباحث عن عمل -->
             <div class="bg-white rounded-xl p-5 shadow-sm mb-4 border-r-4 border-red-400 relative overflow-hidden">
-                <div class="absolute top-0 left-0 bg-red-100 text-red-600 text-[10px] px-2 py-1 rounded-br-lg font-bold">خصم خاص</div>
+                <div class="absolute top-0 left-0 bg-red-500 text-white text-[10px] px-3 py-1 rounded-br-lg font-bold">وفر 10 ريال</div>
                 <h3 class="font-bold text-gray-800 mb-1">🎓 باقة الباحث عن عمل</h3>
-                <ul class="text-xs text-gray-500 list-disc list-inside mb-3">
-                    <li>فتح ملف جدارات وتفعيله</li>
-                    <li>تصميم سيرة ذاتية احترافية</li>
-                    <li>التسجيل في منصات التوظيف</li>
-                </ul>
+                <p class="text-xs text-gray-500 mb-3">(ملف جدارات + سيرة ذاتية احترافية)</p>
                 <div class="flex justify-between items-center border-t pt-2">
-                    <span class="text-xl font-black text-red-600">120 <span class="text-[10px]">ريال</span></span>
-                    <a href="https://wa.me/966500000000?text=أريد%20باقة%20الباحث%20عن%20عمل" class="bg-red-500 text-white px-4 py-1.5 rounded-lg text-xs font-bold">اشترك</a>
+                    <div><span class="discount-price">120</span> <span class="text-2xl font-black text-red-600">110 <span class="text-[10px]">ريال</span></span></div>
+                    <a href="https://wa.me/966500000000?text=باقة%20الباحث%20عرض%20رمضان" class="bg-red-500 text-white px-4 py-1.5 rounded-lg text-xs font-bold">اشترك</a>
                 </div>
             </div>
 
             <!-- باقة الأسرة -->
             <div class="bg-white rounded-xl p-5 shadow-sm border-r-4 border-blue-400 relative overflow-hidden">
+                <div class="absolute top-0 left-0 bg-blue-500 text-white text-[10px] px-3 py-1 rounded-br-lg font-bold">الأكثر توفيراً</div>
                 <h3 class="font-bold text-gray-800 mb-1">👨‍👩‍👧‍👦 باقة الأسرة</h3>
-                <ul class="text-xs text-gray-500 list-disc list-inside mb-3">
-                    <li>تسجيل حساب المواطن (جديد)</li>
-                    <li>إضافة التابعين وتسكين المنازل</li>
-                    <li>التقديم على الضمان المطور</li>
-                </ul>
+                <p class="text-xs text-gray-500 mb-3">(حساب مواطن + ضمان مطور + تابعين)</p>
                 <div class="flex justify-between items-center border-t pt-2">
-                    <span class="text-xl font-black text-blue-600">130 <span class="text-[10px]">ريال</span></span>
-                    <a href="https://wa.me/966536914232?text=أريد%20باقة%20الأسرة" class="bg-blue-600 text-white px-4 py-1.5 rounded-lg text-xs font-bold">اشترك</a>
+                    <div><span class="discount-price">130</span> <span class="text-2xl font-black text-blue-600">115 <span class="text-[10px]">ريال</span></span></div>
+                    <a href="https://wa.me/966500000000?text=باقة%20الاسرة%20عرض%20رمضان" class="bg-blue-600 text-white px-4 py-1.5 rounded-lg text-xs font-bold">اشترك</a>
                 </div>
             </div>
         </div>
 
-        <!-- 5. صفحة الأسعار والتواصل (الشاملة) -->
+        <!-- 5. قائمة الأسعار (المخفضة بواقعية) -->
         <div id="prices-page" class="page-section">
-            <h2 class="text-xl font-bold text-center mb-6 text-gray-800">قائمة الخدمات والأسعار 🏷️</h2>
+            <h2 class="text-xl font-bold text-center mb-6 text-gray-800">قائمة أسعار رمضان 🏷️</h2>
 
             <div class="bg-white rounded-2xl shadow-sm overflow-hidden mb-8 text-sm">
-                <!-- قسم التمويل والحلول -->
-                <div class="bg-gray-50 px-4 py-2 font-bold text-gray-500 text-xs">خدمات التمويل والحلول (جديد)</div>
+                
+                <div class="bg-gray-50 px-4 py-2 font-bold text-purple-800 text-xs">خدمات التمويل والوثائق</div>
                 <div class="divide-y divide-gray-100">
                     <div class="flex justify-between p-3 items-center">
-                        <span class="text-orange-900 font-medium"><i class="fas fa-hand-holding-dollar ml-2 text-orange-500"></i>تمويلات بنك التنمية (نفاذ/أسرة)</span>
-                        <span class="font-bold text-green-600">50 - 150 ريال</span>
+                        <span class="text-gray-700">تمويلات بنك التنمية</span>
+                        <div><span class="discount-price">50</span> <span class="final-price">45 ريال</span> (بداية)</div>
                     </div>
                     <div class="flex justify-between p-3 items-center">
-                        <span class="text-cyan-900 font-medium"><i class="fas fa-lightbulb ml-2 text-cyan-500"></i>استشارات وحلول (مشاكل معقدة)</span>
-                        <span class="font-bold text-green-600">50 - 300 ريال</span>
+                        <span class="text-gray-700">إصدار وثيقة عمل حر</span>
+                        <div><span class="discount-price">40</span> <span class="final-price">35 ريال</span></div>
                     </div>
                 </div>
 
-                <!-- قسم الوثائق -->
-                <div class="bg-gray-50 px-4 py-2 font-bold text-gray-500 text-xs">إصدار الوثائق</div>
+                <div class="bg-gray-50 px-4 py-2 font-bold text-purple-800 text-xs">التسجيل الحكومي</div>
                 <div class="divide-y divide-gray-100">
-                    <div class="flex justify-between p-3 items-center">
-                        <span class="text-teal-900 font-medium"><i class="fas fa-id-card ml-2 text-teal-500"></i>وثيقة العمل الحر</span>
-                        <span class="font-bold text-green-600">40 ريال</span>
+                    <div class="flex justify-between p-3">
+                        <span>تسجيل حساب مواطن</span>
+                        <div><span class="discount-price">45</span> <span class="final-price">40 ريال</span></div>
                     </div>
-                    <div class="flex justify-between p-3 items-center">
-                        <span class="text-amber-900 font-medium"><i class="fas fa-home ml-2 text-amber-500"></i>شهادة أسرة منتجة</span>
-                        <span class="font-bold text-green-600">50 ريال</span>
+                    <div class="flex justify-between p-3">
+                        <span>تسجيل ضمان مطور</span>
+                        <div><span class="discount-price">90</span> <span class="final-price">80 ريال</span></div>
                     </div>
-                </div>
-
-                <!-- قسم التقييمات والمراجعات -->
-                <div class="bg-gray-50 px-4 py-2 font-bold text-gray-500 text-xs">التقييمات والمراجعات</div>
-                <div class="divide-y divide-gray-100">
-                    <div class="flex justify-between p-3 items-center">
-                        <span class="text-purple-900 font-medium"><i class="fas fa-star ml-2 text-purple-500"></i>عرض جميع التقييمات</span>
-                        <a href="reviews.html" class="text-blue-600 font-bold text-sm">عرض ↓</a>
+                    <div class="flex justify-between p-3">
+                        <span>خدمات التوظيف (جدارات)</span>
+                        <div><span class="discount-price">45</span> <span class="final-price">40 ريال</span></div>
                     </div>
                 </div>
             </div>
 
-            <p class="text-center text-xs text-gray-400 mb-6">* الأسعار قابلة للتغيير حسب الخدمة والحالة</p>
+            <a href="https://wa.me/966500000000" class="flex items-center justify-center gap-2 w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-xl transition shadow-lg animate-pulse">
+                <i class="fab fa-whatsapp text-xl"></i> اطلب بعروض رمضان
+            </a>
         </div>
+
     </main>
 
     <!-- شريط التنقل السفلي -->
-    <nav class="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 shadow-lg z-50">
-        <div class="container mx-auto px-4 max-w-lg md:max-w-4xl">
-            <div class="flex justify-around items-center py-3 divide-x divide-gray-200">
-                
-                <!-- الخصوصية والقانونية -->
-                <a href="privacy.html" class="nav-item flex flex-col items-center gap-1 flex-1 py-2 text-center hover:bg-gray-50 rounded-lg transition" data-page="privacy-page">
-                    <i class="fas fa-shield-alt text-lg"></i>
-                    <span class="text-[10px] font-semibold">الخصوصية</span>
-                </a>
+    <nav class="fixed bottom-0 left-0 w-full bg-white border-t border-gray-200 px-6 py-2 flex justify-between items-center z-50 text-xs text-gray-400 shadow-[0_-5px_15px_rgba(0,0,0,0.05)]">
+        
+        <button onclick="switchPage('home-page')" class="nav-item active flex flex-col items-center gap-1 p-2 transition-all" id="btn-home-page">
+            <i class="fas fa-home text-lg"></i>
+            <span>الرئيسية</span>
+        </button>
 
-                <!-- الاتصال -->
-                <a href="contact.html" class="nav-item flex flex-col items-center gap-1 flex-1 py-2 text-center hover:bg-gray-50 rounded-lg transition" data-page="contact-page">
-                    <i class="fas fa-phone text-lg"></i>
-                    <span class="text-[10px] font-semibold">تواصل معنا</span>
-                </a>
+        <button onclick="switchPage('offers-page')" class="nav-item flex flex-col items-center gap-1 p-2 transition-all" id="btn-offers-page">
+            <i class="fas fa-gift text-lg animate-bounce"></i>
+            <span>عروض</span>
+        </button>
 
-                <!-- الخدمات -->
-                <a href="services.html" class="nav-item flex flex-col items-center gap-1 flex-1 py-2 text-center hover:bg-gray-50 rounded-lg transition" data-page="services-page">
-                    <i class="fas fa-list text-lg"></i>
-                    <span class="text-[10px] font-semibold">الخدمات</span>
-                </a>
-
-                <!-- الصفحة الرئيسية -->
-                <a href="#" onclick="switchPage('home-page')" class="nav-item flex flex-col items-center gap-1 flex-1 py-2 text-center hover:bg-gray-50 rounded-lg transition active">
-                    <i class="fas fa-home text-lg"></i>
-                    <span class="text-[10px] font-semibold">الرئيسية</span>
-                </a>
-            </div>
+        <div class="relative -top-6">
+            <a href="https://wa.me/966500000000" class="flex items-center justify-center w-14 h-14 bg-[#4c1d95] text-white rounded-full shadow-lg border-4 border-yellow-400 transform transition hover:scale-110">
+                <i class="fas fa-comment-dots text-2xl"></i>
+            </a>
         </div>
+
+        <button onclick="switchPage('cv-page')" class="nav-item flex flex-col items-center gap-1 p-2 transition-all" id="btn-cv-page">
+            <i class="fas fa-file-alt text-lg"></i>
+            <span>سيرتي</span>
+        </button>
+
+        <a href="reviews.html" class="nav-item flex flex-col items-center gap-1 p-2 transition-all hover:text-yellow-600">
+            <i class="fas fa-star text-lg text-yellow-500"></i>
+            <span>الآراء</span>
+        </a>
+
+        <button onclick="switchPage('prices-page')" class="nav-item flex flex-col items-center gap-1 p-2 transition-all" id="btn-prices-page">
+            <i class="fas fa-list-ul text-lg"></i>
+            <span>الأسعار</span>
+        </button>
+
     </nav>
 
-    <script src="script.js"></script>
+    <script>
+        function switchPage(pageId) {
+            document.querySelectorAll('.page-section').forEach(page => {
+                page.classList.remove('active');
+            });
+            document.getElementById(pageId).classList.add('active');
+            document.querySelectorAll('.nav-item').forEach(btn => {
+                btn.classList.remove('active', 'text-[#4c1d95]');
+            });
+            const activeBtn = document.getElementById('btn-' + pageId);
+            if(activeBtn) activeBtn.classList.add('active');
+            window.scrollTo(0, 0);
+        }
+    </script>
 </body>
-</html>a-hand
+</html>
+
+
